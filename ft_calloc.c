@@ -28,24 +28,24 @@ void	*ft_calloc(size_t count, size_t size)
 	return (ptr);
 }
 
-int	main(void)
-{
-	size_t	count;
-	size_t	size;
-	int		*array;
+// int	main(void)
+// {
+// 	size_t	count;
+// 	size_t	size;
+// 	int		*array;
 
-	count = 5;
-	size = sizeof(int);
-	array = (int *)ft_calloc(count, size);
-	if (array == NULL)
-	{
-		printf("Failed to allocate memory\n");
-		return (1);
-	}
-	for (size_t i = 0; i < count; i++)
-	{
-		printf("%d ", array[i]);
-	}
-	free(array);
-	return (0);
-}
+// 	count = 5;
+// 	size = sizeof(int);
+// 	array = (int *)ft_calloc(count, size);
+// 	if (array == NULL)
+// 	{
+// 		printf("Failed to allocate memory\n");
+// 		return (1);
+// 	}
+// 	for (size_t i = 0; i < count; i++)
+// 	{
+// 		printf("%d ", array[i]);
+// 	}
+// 	free(array);
+// 	return (0);
+// }

@@ -11,49 +11,47 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-
-char *ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-    if (*little == '\0') {
-        return (char *)big;
-    }
+		const char *b = big;
+		const char *l = little;
 
-    while (*big && len > 0) {
-        const char *b = big;
-        const char *l = little;
-
-        while (*b && *l && *b == *l && len > 0) {
-            b++;
-            l++;
-            len--;
-        }
-
-        if (*l == '\0') {
-            return (char *)big;
-        }
-
-        big++;
-        len--;
-    }
-
-    return NULL;
+	if (*little == '\0')
+	{
+		return ((char *)big);
+	}
+	while (*big && len > 0)
+	{
+		while (*b && *l && *b == *l && len > 0)
+		{
+			b++;
+			l++;
+			len--;
+		}
+		if (*l == '\0')
+		{
+			return ((char *)big);
+		}
+		big++;
+		len--;
+	}
+	return (NULL);
 }
 
+// int main(void)
+// {
+//     const char *big = "Hello, World!";
+//     const char *little = "World";
+//     size_t len = 13;
+//     char *result;
 
-int main(void)
-{
-    const char *big = "Hello, World!";
-    const char *little = "World";
-    size_t len = 13;
-    char *result;
+//     result = ft_strnstr(big, little, len);
 
-    result = ft_strnstr(big, little, len);
+//     if (result) {
+//         printf("Found '%s' in '%s' at position: %ld\n", little, big, result- big);
+//     } else {
+//         printf("Did not find '%s' in '%s'\n", little, big);
+//     }
 
-    if (result) {
-        printf("Found '%s' in '%s' at position: %ld\n", little, big, result - big);
-    } else {
-        printf("Did not find '%s' in '%s'\n", little, big);
-    }
-
-    return 0;
-}
+//     return (0);
+// }

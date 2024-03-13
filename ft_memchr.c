@@ -11,34 +11,39 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-void *ft_memchr(const void *str, int c, size_t n)
+void	*ft_memchr(const void *str, int c, size_t n)
 {
-    unsigned char *s;
-    unsigned char uc;
+	unsigned char	*s;
+	unsigned char	uc;
 
-    s = (unsigned char *)str;
-    uc = (unsigned char)c;
-    while (n--)
-    {
-        if (*s == uc)
-            return (s);
-        s++;
-    }
-    return (0);
+	s = (unsigned char *)str;
+	uc = (unsigned char)c;
+	while (n--)
+	{
+		if (*s == uc)
+			return (s);
+		s++;
+	}
+	return (0);
 }
 
-int main() {
-    const char *text = "Hello, World!";
-    char search_char = 'o';
-    size_t n = strlen(text);
+int	main(void)
+{
+	const char	*text = "Hello, World!";
+	char		search_char;
+	size_t		n;
+	void		*result;
 
-    void *result = ft_memchr(text, search_char, n);
-
-    if (result) {
-        printf("Znaleziono '%c' w tekście: %s\n", search_char, (char *)result);
-    } else {
-        printf("'%c' nie zostało znalezione w tekście.\n", search_char);
-    }
-
-    return 0;
+	search_char = 'o';
+	n = strlen(text);
+	result = ft_memchr(text, search_char, n);
+	if (result)
+	{
+		printf("Znaleziono '%c' w tekście: %s\n", search_char, (char *)result);
+	}
+	else
+	{
+		printf("'%c' nie zostało znalezione w tekście.\n", search_char);
+	}
+	return (0);
 }

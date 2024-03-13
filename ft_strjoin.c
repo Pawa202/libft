@@ -41,23 +41,23 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 // Twoja funkcja ft_strjoin i ft_strlen tutaj
 
-int	main(void)
-{
-	char *s1 = "Hello, ";
-	char *s2 = "World!";
-	char *joined;
+// int	main(void)
+// {
+// 	char *s1 = "Hello, ";
+// 	char *s2 = "World!";
+// 	char *joined;
 
-	joined = ft_strjoin(s1, s2);
+// 	joined = ft_strjoin(s1, s2);
 
-	if (joined == NULL)
-	{
-		printf("Failed to allocate memory.\n");
-		return (1);
-	}
+// 	if (joined == NULL)
+// 	{
+// 		printf("Failed to allocate memory.\n");
+// 		return (1);
+// 	}
 
-	printf("Joined string: %s\n", joined);
+// 	printf("Joined string: %s\n", joined);
 
-	free(joined); // Pamiętaj, aby zwolnić pamięć!
+// 	free(joined); // Pamiętaj, aby zwolnić pamięć!
 
-	return (0);
-}
+// 	return (0);
+// }

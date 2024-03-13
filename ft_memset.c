@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-
 // void	*ft_memset(void *buffer, int value, size_t n)
 // {
 // 	unsigned char	*p;
@@ -30,7 +29,7 @@ void	*ft_memset(void *buffer, int value, size_t n)
 {
 	while (n--)
 	{
-		*(unsigned char*)buffer++ = (unsigned char) value;
+		*(unsigned char *)buffer++ = (unsigned char)value;
 	}
 	return (buffer);
 }

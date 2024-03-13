@@ -82,13 +82,11 @@ int	main(void)
 	while (result[i])
 	{
 		printf("Token %d: '%s'\n", i + 1, result[i]);
-		free(result[i]); // Pamiętaj,
-			aby zwolnić pamięć zaalokowaną dla każdego tokena
+		free(result[i]);
 		i++;
 	}
 
-	free(result); // Pamiętaj,
-		aby zwolnić pamięć zaalokowaną dla tablicy wskaźników
+	free(result);
 
 	return (0);
 }

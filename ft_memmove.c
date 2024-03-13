@@ -11,8 +11,7 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-
-void  *f_memmove(void *dest, const void *src, size_t n)
+void	*f_memmove(void *dest, const void *src, size_t n)
 {
 	char	*s;
 	char	*d;
@@ -50,6 +49,5 @@ void  *f_memmove(void *dest, const void *src, size_t n)
 //     // Wypisanie skopiowanych danych
 //     printf("Skopiowane dane: %s\n", destination);
 
-//     return 0;
+//     return (0);
 // }
-

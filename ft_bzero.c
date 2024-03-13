@@ -11,8 +11,7 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-
-void    ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*a;
 
@@ -23,19 +22,19 @@ void    ft_bzero(void *s, size_t n)
 	}
 }
 
-int	main(void)
-{
-	char	buffer[10];
-	size_t	bufferSize;
+// int	main(void)
+// {
+// 	char	buffer[10];
+// 	size_t	bufferSize;
 
-	// Example usage
-	bufferSize = sizeof(buffer);
-	// Fill buffer with zeros using ft_bzero
-	ft_bzero(buffer, bufferSize);
-	// Print the contents of the buffer
-	for (size_t i = 0; i < bufferSize; ++i)
-	{
-		printf("%d ", buffer[i]);
-	}
-	return (0);
-}
+// 	// Example usage
+// 	bufferSize = sizeof(buffer);
+// 	// Fill buffer with zeros using ft_bzero
+// 	ft_bzero(buffer, bufferSize);
+// 	// Print the contents of the buffer
+// 	for (size_t i = 0; i < bufferSize; ++i)
+// 	{
+// 		printf("%d ", buffer[i]);
+// 	}
+// 	return (0);
+// }

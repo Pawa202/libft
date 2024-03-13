@@ -11,9 +11,9 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-char increase_char(unsigned int i, char c)
+char	increase_char(unsigned int i, char c)
 {
-    return c + 1;
+	return (c + 1);
 }
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
@@ -32,14 +32,14 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-int	main(void)
-{
-	char *s = "Hello, World!dddd";
-	char *result = ft_strmapi(s, increase_char);
-	if (result)
-	{
-		printf("%s\n", result);
-		free(result);
-	}
-	return (0);
-}
+// int	main(void)
+// {
+// 	char *s = "Hello, World!dddd";
+// 	char *result = ft_strmapi(s, increase_char);
+// 	if (result)
+// 	{
+// 		printf("%s\n", result);
+// 		free(result);
+// 	}
+// 	return (0);
+// }

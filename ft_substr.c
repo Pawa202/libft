@@ -11,46 +11,44 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start,size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    char *str;
-    size_t i;
+	char	*str;
+	size_t	i;
 
-    i = 0;
-    str = (char *)malloc(len + 1);
-    if(!s)
-        return (NULL);
-    while (i < len)
-    {
-        str[i] = s[start + i];
-        i++;
-    }
-    str[i] = '\0';
-    return (str);
-    
+	i = 0;
+	str = (char *)malloc(len + 1);
+	if (!s)
+		return (NULL);
+	while (i < len)
+	{
+		str[i] = s[start + i];
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
 }
-
 
 // Twoja funkcja ft_substr tutaj
 
-int main(void)
-{
-    char *s = "Hello, World!ghhh";
-    unsigned int start = 7;
-    size_t len = 8;
-    char *substr;
+// int	main(void)
+// {
+// 	char *s = "Hello, World!ghhh";
+// 	unsigned int start = 7;
+// 	size_t len = 8;
+// 	char *substr;
 
-    substr = ft_substr(s, start, len);
+// 	substr = ft_substr(s, start, len);
 
-    if (substr == NULL)
-    {
-        printf("Failed to allocate memory.\n");
-        return 1;
-    }
+// 	if (substr == NULL)
+// 	{
+// 		printf("Failed to allocate memory.\n");
+// 		return (1);
+// 	}
 
-    printf("Substring: %s\n", substr);
+// 	printf("Substring: %s\n", substr);
 
-    free(substr);  // Pamiętaj, aby zwolnić pamięć!
+// 	free(substr); // Pamiętaj, aby zwolnić pamięć!
 
-    return 0;
-}
+// 	return (0);
+// }

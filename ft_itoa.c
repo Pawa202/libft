@@ -55,31 +55,31 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
-int	main(void)
-{
-	int		num1;
-	int		num2;
-	int		num3;
-	char	*str1;
-	char	*str2;
-	char	*str3;
+// int	main(void)
+// {
+// 	int		num1;
+// 	int		num2;
+// 	int		num3;
+// 	char	*str1;
+// 	char	*str2;
+// 	char	*str3;
 
-	num1 = 12345;
-	num2 = -6789;
-	num3 = 0;
-	str1 = ft_itoa(num1);
-	str2 = ft_itoa(num2);
-	str3 = ft_itoa(num3);
-	if (!str1 || !str2 || !str3)
-	{
-		printf("Failed to allocate memory.\n");
-		return (1);
-	}
-	printf("Integer: %d, String: %s\n", num1, str1);
-	printf("Integer: %d, String: %s\n", num2, str2);
-	printf("Integer: %d, String: %s\n", num3, str3);
-	free(str1);
-	free(str2);
-	free(str3);
-	return (0);
-}
+// 	num1 = 12345;
+// 	num2 = -6789;
+// 	num3 = 0;
+// 	str1 = ft_itoa(num1);
+// 	str2 = ft_itoa(num2);
+// 	str3 = ft_itoa(num3);
+// 	if (!str1 || !str2 || !str3)
+// 	{
+// 		printf("Failed to allocate memory.\n");
+// 		return (1);
+// 	}
+// 	printf("Integer: %d, String: %s\n", num1, str1);
+// 	printf("Integer: %d, String: %s\n", num2, str2);
+// 	printf("Integer: %d, String: %s\n", num3, str3);
+// 	free(str1);
+// 	free(str2);
+// 	free(str3);
+// 	return (0);
+// }

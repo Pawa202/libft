@@ -61,22 +61,22 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (ft_substr(s1, start, end - start));
 }
 
-int	main(void)
-{
-	char	*s1;
-	char	*set;
-	char	*trimmed;
+// int	main(void)
+// {
+// 	char	*s1;
+// 	char	*set;
+// 	char	*trimmed;
 
-	s1 = "   Hello, World!   ";
-	set = " ";
-	trimmed = ft_strtrim(s1, set);
-	if (trimmed == NULL)
-	{
-		printf("Failed to allocate memory.\n");
-		return (1);
-	}
-	printf("Original string: '%s'\n", s1);
-	printf("Trimmed string:  '%s'\n", trimmed);
-	free(trimmed); // Remember to free the allocated memory!
-	return (0);
-}
+// 	s1 = "   Hello, World!   ";
+// 	set = " ";
+// 	trimmed = ft_strtrim(s1, set);
+// 	if (trimmed == NULL)
+// 	{
+// 		printf("Failed to allocate memory.\n");
+// 		return (1);
+// 	}
+// 	printf("Original string: '%s'\n", s1);
+// 	printf("Trimmed string:  '%s'\n", trimmed);
+// 	free(trimmed); // Remember to free the allocated memory!
+// 	return (0);
+// }

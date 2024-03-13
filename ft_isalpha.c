@@ -19,7 +19,6 @@ int	ft_isalpha(int c)
 	return (0);
 }
 
-
 // int	main(void)
 // {
 // 	char	ch1;
