@@ -62,31 +62,31 @@ char	**ft_split(const char *s, char c)
 	ret[i] = NULL;
 	return (ret);
 }
-int	main(void)
-{
-	const char *s = "Hello,World!This,is,a,test";
-	char c = ',';
-	char **result;
+// int	main(void)
+// {
+// 	const char *s = "Hello,World!This,is,a,test";
+// 	char c = ',';
+// 	char **result;
 
-	result = ft_split(s, c);
+// 	result = ft_split(s, c);
 
-	if (!result)
-	{
-		printf("Failed to allocate memory.\n");
-		return (1);
-	}
+// 	if (!result)
+// 	{
+// 		printf("Failed to allocate memory.\n");
+// 		return (1);
+// 	}
 
-	printf("Original string: '%s'\n", s);
+// 	printf("Original string: '%s'\n", s);
 
-	int i = 0;
-	while (result[i])
-	{
-		printf("Token %d: '%s'\n", i + 1, result[i]);
-		free(result[i]);
-		i++;
-	}
+// 	int i = 0;
+// 	while (result[i])
+// 	{
+// 		printf("Token %d: '%s'\n", i + 1, result[i]);
+// 		free(result[i]);
+// 		i++;
+// 	}
 
-	free(result);
+// 	free(result);
 
-	return (0);
-}
+// 	return (0);
+// }

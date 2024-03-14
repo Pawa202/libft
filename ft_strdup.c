@@ -45,16 +45,16 @@ char	*ft_strdup(const char *s1)
 	return (start);
 }
 
-int	main(void)
-{
-	char	*original;
-	char	*copy;
+// int	main(void)
+// {
+// 	char	*original;
+// 	char	*copy;
 
-	original = "Hello, World!";
-	copy = ft_strdup(original);
-	printf("Copy: %s\n", copy);
-	// Używaj skopiowanego ciągu znaków
-	free(copy);
-	// Zwolnij pamięć po skończeniu używania skopiowanego ciągu znaków
-	return (0);
-}
+// 	original = "Hello, World!";
+// 	copy = ft_strdup(original);
+// 	printf("Copy: %s\n", copy);
+// 	// Używaj skopiowanego ciągu znaków
+// 	free(copy);
+// 	// Zwolnij pamięć po skończeniu używania skopiowanego ciągu znaków
+// 	return (0);
+// }

@@ -29,15 +29,15 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (d);
 }
-int	main(void)
-{
-	char	source[] = "Hello, World!";
-	char	destination[]= "Goodbye, World!jfhggfgfg";
+// int	main(void)
+// {
+// 	char	source[] = "Hello, World!";
+// 	char	destination[]= "Goodbye, World!jfhggfgfg";
 
-	ft_memcpy(destination, source, sizeof(source));
-	// Print the content of the destination array to verify the copy
-	printf("Source: %s\n", source);
-	printf("Destination: %s\n", destination);
+// 	ft_memcpy(destination, source, sizeof(source));
+// 	// Print the content of the destination array to verify the copy
+// 	printf("Source: %s\n", source);
+// 	printf("Destination: %s\n", destination);
 
-	return (0);
-}
+// 	return (0);
+// }
