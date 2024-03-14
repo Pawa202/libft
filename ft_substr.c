@@ -14,7 +14,7 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
-	size_t	i;
+	int		i;
 
 	i = 0;
 	str = (char *)malloc(len + 1);
@@ -31,24 +31,24 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 // Twoja funkcja ft_substr tutaj
 
-// int	main(void)
-// {
-// 	char *s = "Hello, World!ghhh";
-// 	unsigned int start = 7;
-// 	size_t len = 8;
-// 	char *substr;
+int	main(void)
+{
+	char *s = "Hello, World!ghhh";
+	unsigned int start = 7;
+	int len = 8;
+	char *substr;
 
-// 	substr = ft_substr(s, start, len);
+	substr = ft_substr(s, start, len);
 
-// 	if (substr == NULL)
-// 	{
-// 		printf("Failed to allocate memory.\n");
-// 		return (1);
-// 	}
+	if (substr == NULL)
+	{
+		printf("Failed to allocate memory.\n");
+		return (1);
+	}
 
-// 	printf("Substring: %s\n", substr);
+	printf("Substring: %s\n", substr);
 
-// 	free(substr); // Pamiętaj, aby zwolnić pamięć!
+	free(substr); // Pamiętaj, aby zwolnić pamięć!
 
-// 	return (0);
-// }
+	return (0);
+}

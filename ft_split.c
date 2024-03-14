@@ -13,7 +13,7 @@
 
 static size_t	ft_toklen(const char *s, char c)
 {
-	size_t	ret;
+	int	ret;
 
 	ret = 0;
 	while (*s)
@@ -33,9 +33,9 @@ static size_t	ft_toklen(const char *s, char c)
 char	**ft_split(const char *s, char c)
 {
 	char	**ret;
-	size_t	i;
-	size_t	j;
-	size_t	len;
+	int		i;
+	int		j;
+	int		len;
 
 	ret = (char **)malloc(sizeof(char *) * (ft_toklen(s, c) + 1));
 	if (!ret)
