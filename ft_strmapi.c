@@ -11,10 +11,10 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-char	increase_char(unsigned int i, char c)
-{
-	return (c + 1);
-}
+// char	increase_char(unsigned int i, char c)
+// {
+// 	return (c + i);
+// }
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;

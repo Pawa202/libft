@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_toupper(char a)
+int	ft_toupper(int a)
 {
 	if (a >= 'a' && a <= 'z')
 	{

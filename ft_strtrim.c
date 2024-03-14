@@ -11,25 +11,6 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-static char	*new_str(const char *s1, size_t start, size_t len)
-{
-	char	*str;
-	size_t	i;
-
-	if (len <= 0 || start >= ft_strlen(s1))
-		return (ft_strdup(""));
-	str = ft_calloc(len + 1, sizeof(char));
-	if (!str)
-		return (NULL);
-	i = 0;
-	while (i < len)
-	{
-		str[i] = s1[start + i];
-		i++;
-	}
-	return (str);
-}
-
 static int	to_trim(const char *set, char c)
 {
 	int	i;
@@ -46,7 +27,6 @@ static int	to_trim(const char *set, char c)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	i;
 	int	start;
 	int	end;
 
