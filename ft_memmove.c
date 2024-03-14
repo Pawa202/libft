@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-void	*f_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	char	*s;
 	char	*d;
@@ -41,10 +41,11 @@ void	*f_memmove(void *dest, const void *src, size_t n)
 }
 // int main() {
 //     char source[] = "Hello, World!";
-//     char destination[20];
+//     char destination[40];
 
 //     // Kopiowanie danych z source do destination
-//     f_memmove(destination, source, strlen(source) + 1);
+//     ft_memmove(destination, source, strlen(source) + 1);
+
 
 //     // Wypisanie skopiowanych danych
 //     printf("Skopiowane dane: %s\n", destination);

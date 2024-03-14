@@ -33,24 +33,24 @@ void	*ft_memset(void *buffer, int value, size_t n)
 	}
 	return (buffer);
 }
-int	main(void)
-{
-	char	myString[20];
-	char	standardString[20];
+// int	main(void)
+// {
+// 	char	myString[20];
+// 	char	standardString[20];
 
-	// Ustawienie pierwszych 10 bajtów ciągu na 'A'
-	ft_memset(myString, 'A', 10);
-	// Wyświetlenie rezultatu
-	printf("String after ft_memset: %s\n", myString);
-	// Porównanie z wynikiem funkcji memset z biblioteki standardowej
-	memset(standardString, 'A', 10);
-	if (strcmp(myString, standardString) == 0)
-	{
-		printf("Results match!\n");
-	}
-	else
-	{
-		printf("Results do not match.\n");
-	}
-	return (0);
-}
+// 	// Ustawienie pierwszych 10 bajtów ciągu na 'A'
+// 	ft_memset(myString, 'A', 10);
+// 	// Wyświetlenie rezultatu
+// 	printf("String after ft_memset: %s\n", myString);
+// 	// Porównanie z wynikiem funkcji memset z biblioteki standardowej
+// 	memset(standardString, 'A', 10);
+// 	if (strcmp(myString, standardString) == 0)
+// 	{
+// 		printf("Results match!\n");
+// 	}
+// 	else
+// 	{
+// 		printf("Results do not match.\n");
+// 	}
+// 	return (0);
+// }

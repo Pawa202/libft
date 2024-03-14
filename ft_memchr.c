@@ -27,23 +27,23 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	return (0);
 }
 
-int	main(void)
-{
-	const char	*text = "Hello, World!";
-	char		search_char;
-	size_t		n;
-	void		*result;
+// int	main(void)
+// {
+// 	const char	*text = "Hello, World!";
+// 	char		search_char;
+// 	size_t		n;
+// 	void		*result;
 
-	search_char = 'o';
-	n = strlen(text);
-	result = ft_memchr(text, search_char, n);
-	if (result)
-	{
-		printf("Znaleziono '%c' w tekście: %s\n", search_char, (char *)result);
-	}
-	else
-	{
-		printf("'%c' nie zostało znalezione w tekście.\n", search_char);
-	}
-	return (0);
-}
+// 	search_char = 'l';
+// 	n = ft_strlen(text);
+// 	result = ft_memchr(text, search_char, n);
+// 	if (result)
+// 	{
+// 		printf("Znaleziono '%c'\n", search_char);
+// 	}
+// 	else
+// 	{
+// 		printf("'%c' nie zostało znalezione w tekście.\n", search_char);
+// 	}
+// 	return (0);
+// }

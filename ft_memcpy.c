@@ -18,8 +18,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	const unsigned char	*s;
 
 	i = 0;
-	d = (char *)dest;
-	s = (const char *)src;
+	d = (unsigned char *)dest;
+	s = (const unsigned char *)src;
 	if (!dest && !src)
 		return (0);
 	while (i < n)
@@ -29,14 +29,15 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (d);
 }
-// int	main(void)
-// {
-// 	char	source[] = "Hello, World!";
-// 	char	destination[20];
+int	main(void)
+{
+	char	source[] = "Hello, World!";
+	char	destination[]= "Goodbye, World!jfhggfgfg";
 
-// 	ft_memcpy(destination, source, sizeof(source));
-// 	// Print the content of the destination array to verify the copy
-// 	printf("Source: %s\n", source);
-// 	printf("Destination: %s\n", destination);
-// 	return (0);
-// }
+	ft_memcpy(destination, source, sizeof(source));
+	// Print the content of the destination array to verify the copy
+	printf("Source: %s\n", source);
+	printf("Destination: %s\n", destination);
+
+	return (0);
+}
