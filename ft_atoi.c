@@ -11,21 +11,21 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_atoi(const char *str) //do ulepszenia
+int	ft_atoi(const char *str) // convert a string to an integer
 {
 	int	i;
 	int	n;
-	int	sign;
+	int	minus;
 
-	n = 0;
 	i = 0;
-	sign = 1;
+	n = 0;
+	minus = 1;
 	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
-			sign *= -1;
+			minus *= -1;
 		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
@@ -33,16 +33,16 @@ int	ft_atoi(const char *str) //do ulepszenia
 		n = n * 10 + (str[i] - '0');
 		i++;
 	}
-	return (n * sign);
+	return (n * minus);
 }
 // int	main(void)
 // {
-// 	const char *str = "12345";
+// 	const char *str = " -12345";
 // 	int number;
-
+//
 // 	number = ft_atoi(str);
-
+//
 // 	printf("Converted number is %d\n", number);
-
+//
 // 	return (0);
 // }
