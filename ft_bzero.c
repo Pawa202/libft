@@ -6,11 +6,11 @@
 /*   By: prutkows <prutkows@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 14:46:59 by prutkows          #+#    #+#             */
-/*   Updated: 2024/03/14 22:03:37 by prutkows         ###   ########.fr       */
+/*   Updated: 2024/03/19 21:28:26 by prutkows         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stddef.h>
 
+#include"libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
