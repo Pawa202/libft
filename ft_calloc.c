@@ -11,10 +11,10 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size) // allocate memory and set it to zero
+void	*ft_calloc(size_t count, size_t size)
 {
 	unsigned char	*ptr;
-	int			i;
+	size_t			i;
 
 	i = 0;
 	ptr = malloc(count * size);
@@ -33,7 +33,7 @@ void	*ft_calloc(size_t count, size_t size) // allocate memory and set it to zero
 // 	size_t	count;
 // 	size_t	size;
 // 	int		*array;
-//
+
 // 	count = 5;
 // 	size = sizeof(int);
 // 	array = (int *)ft_calloc(count, size);

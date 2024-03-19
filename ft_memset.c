@@ -11,28 +11,28 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-// void	*ft_memset(void *buffer, int value, size_t n)
-// {
-// 	unsigned char	*p;
-// 	unsigned char	uc_value;
+ void	*ft_memset(void *buffer, int value, size_t n)
+ {
+ 	unsigned char	*p;
+ 	unsigned char	uc_value;
 
-// 	uc_value = (unsigned char)value;
-// 	p = buffer;
-// 	while (n--)
-// 	{
-// 		*p++ = uc_value;
-// 	}
-// 	return (buffer);
-// }
+ 	uc_value = (unsigned char)value;
+ 	p = buffer;
+ 	while (n--)
+ 	{
+ 		*p++ = uc_value;
+ 	}
+ 	return (buffer);
+ }
 
-void	*ft_memset(void *buffer, int value, size_t n)
-{
-	while (n--)
-	{
-		*(unsigned char *)buffer++ = (unsigned char)value;
-	}
-	return (buffer);
-}
+//void	*ft_memset(void *buffer, int value, size_t n)
+//{
+//	while (n--)
+//	{
+//		*(unsigned char *)buffer++ = (unsigned char)value;
+//	}
+//	return (buffer);
+//}
 // int	main(void)
 // {
 // 	char	myString[20];

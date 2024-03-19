@@ -11,33 +11,35 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	r;
+    size_t    src_len;
+    size_t    dst_len;
 
-	i = 0;
-	j = 0;
-	r = 0;
-	while (dest[i])
-		i++;
-	while (src[j])
-		j++;
-	if (size <= i)
-		r += size;
-	else
-		r += i;
-	while (src[j] != '\0' && i < size - 1)
-	{
-		dest[i] = src[j];
-		i++;
-		j++;
-	}
-	dest[i] = '\0';
-	return (r);
+    src_len = ft_strlen(src);
+    dst_len = ft_strlen(dst);
+
+    if (dst_len >= dstsize)
+    {
+        dst_len = dstsize;
+    }
+
+    if (dst_len == dstsize)
+    {
+        return (dstsize + src_len);
+    }
+
+    if (src_len < dstsize - dst_len)
+    {
+        ft_memcpy(dst + dst_len, src, src_len + 1);
+    }
+    else
+    {
+        ft_memcpy(dst + dst_len, src, dstsize - dst_len - 1);
+        dst[dstsize - 1] = '\0';
+    }
+    return (dst_len + src_len);
 }
-
 // int	main(void)
 // {
 // 	char			destination[20] = "Hello, ";

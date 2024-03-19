@@ -15,46 +15,47 @@
 
 int	get_num_length(int n)
 {
-	int	length;
+ int	length;
 
-	length = 0;
-	if (n <= 0)
-		length = 1;
-	while (n != 0)
-	{
-		n /= 10;
-		length++;
-	}
-	return (length);
+ length = 0;
+ if (n <= 0)
+  length = 1;
+ while (n != 0)
+ {
+  n /= 10;
+  length++;
+ }
+ return (length);
 }
+
 char	*ft_itoa(int n)
 {
-	int		length;
-	char	*str;
+ int		length;
+ char	*str;
+ long long n_ll = n; // przekształcamy n na long long
 
-	length = get_num_length(n);
-	str = malloc(length + 1);
-	if (!str)
-		return (NULL);
-	str[length] = '\0';
-	if (n == 0)
-	{
-		str[0] = '0';
-		return (str);
-	}
-	if (n < 0)
-	{
-		str[0] = '-';
-		n *= -1;
-	}
-	while (n > 0)
-	{
-		str[--length] = (n % 10) + '0';
-		n /= 10;
-	}
-	return (str);
+ length = get_num_length(n);
+ str = malloc(length + 1);
+ if (!str)
+  return (NULL);
+ str[length] = '\0';
+ if (n == 0)
+ {
+  str[0] = '0';
+  return (str);
+ }
+ if (n_ll < 0)
+ {
+  str[0] = '-';
+  n_ll *= -1; // mnożymy n_ll, a nie n
+ }
+ while (n_ll > 0)
+ {
+  str[--length] = (n_ll % 10) + '0';
+  n_ll /= 10;
+ }
+ return (str);
 }
-
 // int	main(void)
 // {
 // 	int		num1;

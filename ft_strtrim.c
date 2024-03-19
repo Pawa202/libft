@@ -11,34 +11,27 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-static int	to_trim(const char *set, char c)
-{
-	int	i;
-
-	i = 0;
-	while (set[i])
-	{
-		if (c == set[i])
-			return (0);
-		i++;
-	}
-	return (1);
-}
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	start;
-	int	end;
+	int		start;
+	int		end;
+	char	*str;
 
 	if (!s1 || !set)
 		return (NULL);
 	start = 0;
-	while (s1[start] && to_trim(set, s1[start]))
+	end = ft_strlen(s1) - 1;
+	while (ft_strchr(set, s1[start]) && start <= end)
 		start++;
-	end = ft_strlen(s1);
-	while (end > start && to_trim(set, s1[end - 1]))
+	if (start > end)
+		return (ft_strdup(s1 + end + 1));
+	while (ft_strchr(set, s1[end]) && end >= 0)
 		end--;
-	return (ft_substr(s1, start, end - start));
+	str = malloc(end - start + 2);
+	if (!str)
+		return (NULL);
+	ft_strlcpy(str, &s1[start], end - start + 2);
+	return (str);
 }
 
 // int	main(void)

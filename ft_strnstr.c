@@ -13,29 +13,24 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-		const char *b = big;
-		const char *l = little;
+  size_t little_len;
 
-	if (*little == '\0')
-	{
-		return ((char *)big);
-	}
-	while (*big && len > 0)
-	{
-		while (*b && *l && *b == *l && len > 0)
-		{
-			b++;
-			l++;
-			len--;
-		}
-		if (*l == '\0')
-		{
-			return ((char *)big);
-		}
-		big++;
-		len--;
-	}
-	return (NULL);
+  if (*little == '\0')
+  {
+    return ((char *)big);
+  }
+
+  little_len = strlen(little);
+  while (*big && len >= little_len)
+  {
+    if (strncmp(big, little, little_len) == 0)
+    {
+      return ((char *)big);
+    }
+    big++;
+    len--;
+  }
+  return (NULL);
 }
 
 // int main(void)

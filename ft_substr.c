@@ -14,12 +14,14 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
-	int		i;
+	size_t		i;
 
 	i = 0;
 	str = (char *)malloc(len + 1);
 	if (!s)
 		return (NULL);
+	if (start >= ft_strlen(s))
+                return (ft_strdup(""));	
 	while (i < len)
 	{
 		str[i] = s[start + i];
@@ -29,9 +31,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (str);
 }
 
-// Twoja funkcja ft_substr tutaj
 
-int	main(void)
+/*int	main(void)
 {
 	char *s = "Hello, World!ghhh";
 	unsigned int start = 7;
@@ -51,4 +52,4 @@ int	main(void)
 	free(substr); // Pamiętaj, aby zwolnić pamięć!
 
 	return (0);
-}
+}*/
