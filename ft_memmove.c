@@ -46,7 +46,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 //     // Kopiowanie danych z source do destination
 //     ft_memmove(destination, source, strlen(source) + 1);
 
-
 //     // Wypisanie skopiowanych danych
 //     printf("Skopiowane dane: %s\n", destination);
 

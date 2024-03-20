@@ -13,40 +13,59 @@
 
 int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {
- while (n--)
- {
-  if (*str1 != *str2 || *str1 == '\0' || *str2 == '\0')
-  {
-   return ((unsigned char)*str1 - (unsigned char)*str2);
-  }
-  str1++;
-  str2++;
- }
- return (0);
+	while (n--)
+	{
+		if (*str1 != *str2 || *str1 == '\0' || *str2 == '\0')
+		{
+			return ((unsigned char)*str1 - (unsigned char)*str2);
+		}
+		str1++;
+		str2++;
+	}
+	return (0);
 }
-// int main() {
-//     const char *text1 = "Hello, World!";
-//     const char *text2 = "Hello, C Programming!";
-//     size_t n = 7;
+// int	main(void)
+// {
+// 	const char	*text1 = "Hello, World!";
+// 	const char	*text2 = "Hello, C Programming!";
+// 	size_t		n;
+// 	int			result;
+// 	int			result2;
 
-//     int result = ft_strncmp(text1, text2, n);
-//     int result2 = strncmp(text1, text2, n);
-
-//     if (result == 0) {
-//         printf("Pierwsze %zu znaków są identyczne.\n", n);
-//     } else if (result < 0) {
-//         printf("Pierwsze %zu znaków różnią się, a pierwszy różniący się znak w tekście 1 jest mniejszy niż w tekście 2.\n", n);
-//     } else {
-//         printf("Pierwsze %zu znaków różnią się, a pierwszy różniący się znak w tekście 1 jest większy niż w tekście 2.\n", n);
-//     }
-
-//     if (result2 == 0) {
-//         printf("Pierwsze %zu znaków są identyczne.\n", n);
-//     } else if (result < 0) {
-//         printf("Pierwsze %zu znaków różnią się, a pierwszy różniący się znak w tekście 1 jest mniejszy niż w tekście 2.\n", n);
-//     } else {
-//         printf("Pierwsze %zu znaków różnią się, a pierwszy różniący się znak w tekście 1 jest większy niż w tekście 2.\n", n);
-//     }
-
-//     return 0;
+// 	n = 7;
+// 	result = ft_strncmp(text1, text2, n);
+// 	result2 = strncmp(text1, text2, n);
+// 	if (result == 0)
+// 	{
+// 		printf("Pierwsze %zu znaków są identyczne.\n", n);
+// 	}
+// 	else if (result < 0)
+// 	{
+// 		printf("Pierwsze %zu znaków różnią się,
+// 			a pierwszy różniący się znak w tekście 1 jest mniejszy niż w tekście 2.\n",
+// 			n);
+// 	}
+// 	else
+// 	{
+// 		printf("Pierwsze %zu znaków różnią się,
+// 			a pierwszy różniący się znak w tekście 1 jest większy niż w tekście 2.\n",
+// 			n);
+// 	}
+// 	if (result2 == 0)
+// 	{
+// 		printf("Pierwsze %zu znaków są identyczne.\n", n);
+// 	}
+// 	else if (result < 0)
+// 	{
+// 		printf("Pierwsze %zu znaków różnią się,
+// 			a pierwszy różniący się znak w tekście 1 jest mniejszy niż w tekście 2.\n",
+// 			n);
+// 	}
+// 	else
+// 	{
+// 		printf("Pierwsze %zu znaków różnią się,
+// 			a pierwszy różniący się znak w tekście 1 jest większy niż w tekście 2.\n",
+// 			n);
+// 	}
+// 	return (0);
 // }
