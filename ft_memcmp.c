@@ -35,10 +35,12 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 // 	int result;
 
 // 	result = ft_memcmp(str1, str2, sizeof(str1));
-// 	result == 0 ? printf("str1 i str2 są równe\n") : printf("str1 i str2 są różne\n");
+// 	result == 0 ? printf("str1 i str2 są równe\n") :
+//  printf("str1 i str2 są różne\n");
 
 // 	result = ft_memcmp(str1, str3, sizeof(str1));
-// 	result == 0 ? printf("str1 i str3 są równe\n") : printf("str1 i str3 są różne\n");
+// 	result == 0 ? printf("str1 i str3 są równe\n") :
+//  printf("str1 i str3 są różne\n");
 
 // 	return (0);
 // }

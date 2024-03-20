@@ -30,6 +30,7 @@ static size_t	ft_toklen(const char *s, char c)
 	return (ret);
 }
 
+
 char	**ft_split(const char *s, char c)
 {
 	char	**ret;

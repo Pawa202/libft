@@ -30,29 +30,29 @@ int	get_num_length(int n)
 
 char	*ft_itoa(int n)
 {
-	int		length;
-	char	*str;
+	int			length;
+	char		*str;
+	long long	n_ll;
 
-	long long n_ll = n; // przekształcamy n na long long
-	length = get_num_length(n);
-	str = malloc(length + 1);
+	n_ll = n;
+	str = malloc((length = get_num_length(n)) + 1);
 	if (!str)
 		return (NULL);
 	str[length] = '\0';
 	if (n == 0)
-	{
 		str[0] = '0';
-		return (str);
-	}
-	if (n_ll < 0)
+	else
 	{
-		str[0] = '-';
-		n_ll *= -1; // mnożymy n_ll, a nie n
-	}
-	while (n_ll > 0)
-	{
-		str[--length] = (n_ll % 10) + '0';
-		n_ll /= 10;
+		if (n_ll < 0)
+		{
+			str[0] = '-';
+			n_ll *= -1;
+		}
+		while (n_ll > 0)
+		{
+			str[--length] = (n_ll % 10) + '0';
+			n_ll /= 10;
+		}
 	}
 	return (str);
 }

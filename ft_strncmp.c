@@ -42,13 +42,15 @@ int	ft_strncmp(const char *str1, const char *str2, size_t n)
 // 	else if (result < 0)
 // 	{
 // 		printf("Pierwsze %zu znaków różnią się,
-// 			a pierwszy różniący się znak w tekście 1 jest mniejszy niż w tekście 2.\n",
+// 			a pierwszy różniący się znak w 
+// tekście 1 jest mniejszy niż w tekście 2.\n",
 // 			n);
 // 	}
 // 	else
 // 	{
 // 		printf("Pierwsze %zu znaków różnią się,
-// 			a pierwszy różniący się znak w tekście 1 jest większy niż w tekście 2.\n",
+// 			a pierwszy różniący się znak w 
+// tekście 1 jest większy niż w tekście 2.\n",
 // 			n);
 // 	}
 // 	if (result2 == 0)
@@ -58,13 +60,15 @@ int	ft_strncmp(const char *str1, const char *str2, size_t n)
 // 	else if (result < 0)
 // 	{
 // 		printf("Pierwsze %zu znaków różnią się,
-// 			a pierwszy różniący się znak w tekście 1 jest mniejszy niż w tekście 2.\n",
+// 			a pierwszy różniący się znak w 
+// tekście 1 jest mniejszy niż w tekście 2.\n",
 // 			n);
 // 	}
 // 	else
 // 	{
 // 		printf("Pierwsze %zu znaków różnią się,
-// 			a pierwszy różniący się znak w tekście 1 jest większy niż w tekście 2.\n",
+// 			a pierwszy różniący się znak w 
+// tekście 1 jest większy niż w tekście 2.\n",
 // 			n);
 // 	}
 // 	return (0);
