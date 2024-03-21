@@ -11,28 +11,28 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-void	*ft_memset(void *buffer, int value, size_t n)
-{
-	unsigned char	*p;
-	unsigned char	uc_value;
+// void	*ft_memset(void *buffer, int value, size_t len)
+// {
+// 	unsigned char	*p;
+// 	unsigned char	uc_value;
 
-	uc_value = (unsigned char)value;
-	p = buffer;
-	while (n--)
+// 	uc_value = (unsigned char)value;
+// 	p = buffer;
+// 	while (len--)
+// 	{
+// 		*p++ = uc_value;
+// 	}
+// 	return (buffer);
+// }
+
+void	*ft_memset(void *buffer, int value, size_t len)
+{
+	while (len--)
 	{
-		*p++ = uc_value;
+		*(unsigned char *)buffer++ = (unsigned char)value;
 	}
 	return (buffer);
 }
-
-// void	*ft_memset(void *buffer, int value, size_t n)
-//{
-//	while (n--)
-//	{
-//		*(unsigned char *)buffer++ = (unsigned char)value;
-//	}
-//	return (buffer);
-//}
 // int	main(void)
 // {
 // 	char	myString[20];
@@ -41,16 +41,16 @@ void	*ft_memset(void *buffer, int value, size_t n)
 // 	// Ustawienie pierwszych 10 bajtów ciągu na 'A'
 // 	ft_memset(myString, 'A', 10);
 // 	// Wyświetlenie rezultatu
-// 	printf("String after ft_memset: %s\n", myString);
+// 	printf("String after ft_memset: %s\len", myString);
 // 	// Porównanie z wynikiem funkcji memset z biblioteki standardowej
 // 	memset(standardString, 'A', 10);
 // 	if (strcmp(myString, standardString) == 0)
 // 	{
-// 		printf("Results match!\n");
+// 		printf("Results match!\len");
 // 	}
 // 	else
 // 	{
-// 		printf("Results do not match.\n");
+// 		printf("Results do not match.\len");
 // 	}
 // 	return (0);
 // }

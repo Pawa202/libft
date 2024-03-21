@@ -13,7 +13,7 @@
 
 static size_t	ft_toklen(const char *s, char c)
 {
-	int	ret;
+	size_t	ret;
 
 	ret = 0;
 	while (*s)
