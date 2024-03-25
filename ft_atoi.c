@@ -26,7 +26,7 @@ int	ft_atoi(const char *str)
 	if (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
-			sign *= -1;
+			sign = -1;
 		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
@@ -36,14 +36,14 @@ int	ft_atoi(const char *str)
 	}
 	return (n * sign);
 }
-/*int	main(void)
-{
-	const char *str = "12345";
-	int number;
+// int	main(void)
+// {
+// 	const char *str = "12345";
+// 	int number;
 
-	number = ft_atoi(str);
+// 	number = ft_atoi(str);
 
-	printf("Converted number is %d\n", number);
+// 	printf("Converted number is %d\n", number);
 
-	return (0);
-}*/
+// 	return (0);
+// }
