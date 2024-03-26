@@ -13,7 +13,7 @@
 
 size_t	ft_strlen(const char *s)
 {
-	static unsigned char	i;
+	size_t	i;
 
 	while (s[i])
 		i++;
