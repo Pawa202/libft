@@ -81,7 +81,7 @@ char	**ft_split(char const *s, char c)
 	result = ft_calloc((ft_word_count(s, c) + 1), sizeof(char *));
 	if (*result)
 		return (NULL);
-	while (index < ft_strlen(s))
+	while (index <= ft_strlen(s))
 	{
 		if (s[index] != c && start_word < 0)
 			start_word = index;
