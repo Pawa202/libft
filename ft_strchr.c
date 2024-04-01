@@ -21,6 +21,7 @@ char	*ft_strchr(const char *str, int c)
 	}
 	return ((char *)str);
 }
+
 // int	main(void)
 // {
 // 	const char	*myString = "Hello, World!";

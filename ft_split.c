@@ -11,94 +11,93 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-// static size_t	ft_toklen(const char *s, char c)
-// {
-// 	size_t	ret;
-
-// 	ret = 0;
-// 	while (*s)
-// 	{
-// 		if (*s != c)
-// 		{
-// 			++ret;
-// 			while (*s && *s != c)
-// 				++s;
-// 		}
-// 		else
-// 			++s;
-// 	}
-// 	return (ret);
-// }
-static size_t	ft_toklen(const char *s, char c)
+static void	ft_initiation(size_t *index, int *word_index, int *start_word)
 {
-	size_t	len;
+	*index = 0;
+	*word_index = 0;
+	*start_word = -1;
+}
+static void	*ft_free_word(char **strs, int count)
+{
+	int	i;
 
-	len = 0;
-	while (s[len] != c && s[len])
-		len++;
-	return (len);
+	i = 0;
+	while (i < count)
+	{
+		free(strs[i]);
+		i++;
+	}
+	free(strs);
+	return (NULL);
+}
+
+static char	*ft_fill_word(const char *str, int start, int end)
+{
+	char	*word;
+	int		i;
+
+	i = 0;
+	word = malloc((end - start + 1) * sizeof(char));
+	if (!word)
+		return (NULL);
+	while (start < end)
+	{
+		word[i] = str[start];
+		i++;
+		start++;
+	}
+	word[i] = 0;
+	return (word);
+}
+static int	ft_word_count(const char *str, char c)
+{
+	int	count;
+	int	y;
+
+	count = 0;
+	y = 0;
+	while (*str)
+	{
+		if (*str != c && y == 0)
+		{
+			y = 1;
+			count++;
+		}
+		else if (*str == c)
+			y = 0;
+		str++;
+	}
+	return (count);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**lst;
-	size_t	word_len;
-	int		i;
+	char	**result;
+	size_t	index;
+	int		word_index;
+	int		start_word;
 
-	lst = (char **)malloc((ft_toklen(s, c) + 1) * sizeof(char *));
-	if (!s || !lst)
-		return (0);
-	i = 0;
-	while (*s)
+	ft_initiation(&index, &word_index, &start_word);
+	result = ft_calloc((ft_word_count(s, c) + 1), sizeof(char *));
+	if (*result)
+		return (NULL);
+	while (index < ft_strlen(s))
 	{
-		while (*s == c && *s)
-			s++;
-		if (*s)
+		if (s[index] != c && start_word < 0)
+			start_word = index;
+		else if ((s[index] == c || index == ft_strlen(s)) && start_word >= 0)
 		{
-			if (ft_strchr(s, c))
-				word_len = ft_strchr(s, c) - s;
-			else
-				word_len = ft_strlen(s);
-			lst[i++] = ft_substr(s, 0, word_len);
-			s += word_len;
+			result[word_index] = ft_fill_word(s, start_word, index);
+			if (!(result[word_index]))
+				return (ft_free_word(result, word_index));
+			start_word = -1;
+			word_index++;
 		}
+		index++;
 	}
-	lst[i] = NULL;
-	return (lst);
+	return (result);
 }
 
-// char	**ft_split(const char *s, char c)
-// {
-// 	char	**ret;
-// 	int		i;
-// 	int		j;
-// 	int		len;
-
-// 	ret = (char **)malloc(sizeof(char *) * (ft_toklen(s, c) + 1));
-// 	if (!ret)
-// 		return (NULL);
-// 	i = 0;
-// 	while (*s)
-// 	{
-// 		if (*s != c)
-// 		{
-// 			len = 0;
-// 			while (s[len] && s[len] != c)
-// 				++len;
-// 			ret[i] = (char *)malloc(len + 1);
-// 			if (!ret[i])
-// 				return (NULL);
-// 			j = 0;
-// 			while (j < len)
-// 				ret[i][j++] = *s++;
-// 			ret[i++][j] = '\0';
-// 		}
-// 		else
-// 			++s;
-// 	}
-// 	ret[i] = NULL;
-// 	return (ret);
-// }
 // int	main(void)
 // {
 // 	const char *s = "Hello,World!This,is,a,test";
