@@ -17,6 +17,7 @@ static void	ft_initiation(size_t *index, int *word_index, int *start_word)
 	*word_index = 0;
 	*start_word = -1;
 }
+
 static void	*ft_free_word(char **strs, int count)
 {
 	int	i;
@@ -49,6 +50,7 @@ static char	*ft_fill_word(const char *str, int start, int end)
 	word[i] = 0;
 	return (word);
 }
+
 static int	ft_word_count(const char *str, char c)
 {
 	int	count;
