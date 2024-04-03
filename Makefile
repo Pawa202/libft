@@ -1,6 +1,5 @@
-NAME = libft.a
-SOURCES = \
-	ft_isalpha.c\
+NAME := libft.a
+SRC :=	ft_isalpha.c\
 	ft_isdigit.c\
 	ft_isalnum.c\
 	ft_isascii.c\
@@ -35,26 +34,30 @@ SOURCES = \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c  \
 
-OBJECTS = $(SOURCES:.c=.o)
+OBJ := $(SRC:.c=.o)
 
 
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CC := cc
+CFLAGS := -Wall -Wextra -Werror
 
 all: $(NAME)
 
-$(NAME): $(OBJECTS)
-	$(AR) -r $@ $?
+$(NAME): $(OBJ)
+	ar rcs $(NAME) $(OBJ)
 
 %.o: %.c
 	$(CC) -c $(CFLAGS) $?
 
 clean:
-	rm -f $(OBJECTS) $(BOBJECTS)
+	rm -f $(OBJ) 
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
+	cc -nostartfiles -shared -o libft.so $(OBJ)
+	
 .PHONY: all bonus clean fclean re
