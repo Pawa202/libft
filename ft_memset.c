@@ -27,11 +27,15 @@
 
 void	*ft_memset(void *buffer, int value, size_t len)
 {
+	int	i;
+
+	i = 0;
 	while (len--)
 	{
 		*(unsigned char *)buffer++ = (unsigned char)value;
+		i++;
 	}
-	return (buffer);
+	return (buffer - i);
 }
 // int	main(void)
 // {

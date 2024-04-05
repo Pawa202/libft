@@ -31,13 +31,17 @@
 // }
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
+	int	i;
+
+	i = 0;
 	if (!dest && !src)
 		return (0);
 	while (n--)
 	{
 		*((unsigned char *)dest++) = *((const unsigned char *)src++);
+		i++;
 	}
-	return (dest);
+	return (dest - i);
 }
 // int	main(void)
 // {
